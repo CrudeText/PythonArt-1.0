@@ -57,10 +57,42 @@ Generates vertical columns of evolving colors, either randomly or from a base RG
 - `sizex`, `sizey`: Image size
 - `columnsize`: Width of each color column
 - `increment`: Color variation per pixel
+- `darkvariation`, `lightvariation`: Probabilities of brightness/darkness
 - `R`, `G`, `B`: Starting color (0–255)
 - `randstart`: Whether to start with a random color
+- `randvariation`: Adds randomness to how color changes over time
 - `save`: Whether to save the image
 - `customname`: Filename if saving
+
+---
+
+### 4. `SunRay(...)`
+Draws symmetrical rays between two concentric rings of points to create a mandala-like radial pattern.
+
+**Key parameters:**
+
+- `linenumber`: Number of rays to draw
+- `ringnumber`: Number of concentric ring layers
+- `imgsize`: Size of the output image in pixels
+- `shift`: Rotation offset between inner and outer rings
+- `R`, `G`, `B`: Line color (RGB)
+- `linethickness`: Width of each line
+- `inRatio`, `outRatio`: Control the radii of the inner and outer rings
+
+---
+
+### 5. `randSun(...)`
+Like `SunRay` but adds randomness to angle offsets and line colors, producing a chaotic burst of rays.
+
+**Key parameters:**
+
+- `linenumber`: Number of rays to draw
+- `imgsize`: Image size in pixels
+- `shift`: Base offset between rings
+- `R`, `G`, `B`: Base colors (used less in this version)
+- `linethickness`: Width of each line
+- `inRatio`, `outRatio`: Ring size ratios
+- `maxvarout`, `maxvarin`: Maximum angular random offsets for each ray
 
 ---
 
@@ -78,6 +110,25 @@ This file grows with each run and can be used to replicate settings or for debug
 
 ---
 
+## Preview
+
+Here are example outputs for each art function:
+
+### `maxlines(points)`
+![maxlines](output/mandala101716.png)
+
+### `gradientImg(imgsizex, imgsizey)`
+![gradientImg](output/gradient100611.png)
+
+### `randGradient(...)`
+![randGradient](output/170607colorcolumn.png)
+
+### `SunRay(...)`
+![SunRay](output/SunRay1.png)
+
+### `randSun(...)`
+![randSun](output/IrisArt5.png)
+
 ## Example Usage
 
 ```bash
@@ -89,18 +140,9 @@ Available art functions:
 1. maxlines: Creates a complex mandala-like figure from point-to-point connections on a polygon.
 2. gradientImg: Generates a smooth linear gradient from black to yellow.
 3. randGradient: Generates color columns with evolving RGB values down the image.
-
-Enter the name of the function to run: randGradient
-How many times do you want to run this function? 1
-
-Enter value for 'sizex' (Width of image (px), range: 500 - 4000) [default: 1920]:
-Enter value for 'sizey' (Height of image (px), range: 500 - 4000) [default: 1080]:
-...
-Enter value for 'save' (Save image to file?, range: True/False) [default: False]: true
-Enter value for 'customname' (Custom filename (w/o .png), range: e.g. Jesus, mandala_test) [default: Jesus]: galaxy1
+4. SunRay: Draws symmetrical rays between concentric circles.
+5. randSun: Chaotic burst of randomized rays with color variation.
 ```
-
-This will generate your art and save it as `output/galaxy1.png`.
 
 ---
 
@@ -131,4 +173,3 @@ This will generate your art and save it as `output/galaxy1.png`.
 ## Author
 
 Created by William Arranz (aka **CrudeText**)
-Contact: [your email or link here]
