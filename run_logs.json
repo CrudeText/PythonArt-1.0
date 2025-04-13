@@ -1,0 +1,19 @@
+[
+    {
+        "timestamp": "2025-04-13T20:13:19.185664",
+        "function": "randSun",
+        "parameters": {
+            "linenumber": 2000,
+            "imgsize": 5000,
+            "shift": 4,
+            "R": 200,
+            "G": 8,
+            "B": 10,
+            "linethickness": 1,
+            "inRatio": 0.3,
+            "outRatio": 1.0,
+            "maxvarout": 300,
+            "maxvarin": 300
+        }
+    }
+]
