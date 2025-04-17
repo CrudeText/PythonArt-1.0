@@ -1,6 +1,6 @@
 # PythonArt v1.0 (by CrudeText)
 
-This project is a command-line art generator designed to produce static, abstract digital images using various algorithmic techniques.
+This project (2022) is a command-line art generator designed to produce static, abstract digital images using various algorithmic techniques.
 
 All artworks are generated through mathematical or random processes, and the user interacts through a simple terminal-based interface.
 
